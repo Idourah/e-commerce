@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main-content %}
+ <!-- Start All Title Box -->
+    <div class="all-title-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2> Your shipping Cart</h2>
+                    <ul class="breadcrumb bg-info">
+                        <li class="breadcrumb-item"><a href="#">Shop</a></li>
+                        <li class="breadcrumb-item active">Cart</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End All Title Box -->
+
+    <!-- Start Cart  -->
+    <div class="cart-box-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="table-main table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr class="bg-info">
+                                    <th>Images</th>
+                                    <th>Product Name</th>
+                                    <th>Price</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                               {% if cart_items %}
+                                   {% for item in cart_items %}
+                                        <tr>
+                                            <td class="thumbnail-img">
+                                                <a href="#">
+                                            <img class="img-fluid w-50" src="{{ item.product.image.url }}" alt="" />
+                                        </a>
+                                            </td>
+                                            <td class="name-pr">
+                                                <a href="#">
+                                                 {{ item.name }}
+                                                </a>
+                                            </td>
+                                            <td class="price-pr">
+                                                <p>$ {{ item.price }}</p>
+                                            </td>
+                                            <td class="remove-pr" colspan="2">
+                                                <form method="POST" action="{% url 'cart' %}">
+                                                    {% csrf_token %}
+                                                    <input type="hidden" name="item_id" value="{{ item.id }}" >
+                                                    <label for="quantity">Quantity: </label>
+                                                    <input type="number" size="4" name="quantity" value="{{ item.quantity }}" min="0" step="1" class="c-input-text qty text">
+                                                    <input type="submit" class="btn btn-dark" name="submit" value="Update">
+                                                </form>
+                                            </td>
+                                            <td class="remove-pr">
+                                                 <form method="POST" action="{% url 'cart' %}">
+                                                     {% csrf_token %}
+                                                    <input type="hidden" value="{{ item.id }}" name="item_id">
+                                                    <input type="submit" class="btn btn-danger" name="submit" value="Remove">
+                                                </form>
+                                            </td>
+                                             <td class="total-pr">
+                                                <p> $ {{ item.total }}</p>
+                                            </td>
+
+                                        </tr>
+                                   {% endfor %}
+
+                               {% else %}
+                                <tr>
+                                    <td colspan="6" style="height:30px">
+                                        <h3>Your cart is empty</h3>
+                                    </td>
+                                </tr>
+                               {% endif %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row my-5">
+                <div class="col-lg-0 col-sm-12"></div>
+                <div class="col-lg-4 col-sm-12">
+                    <div class="order-box">
+                        <h3>Order summary</h3>
+                        <div class="d-flex">
+                            <h4>Sub Total</h4>
+                            <div class="ml-auto font-weight-bold"> $ {{ cart_total }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 d-flex shopping-box"><a href="{% url 'checkout' %}" class="ml-auto btn hvr-hover bg-info">Checkout</a> </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- End Cart -->
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+{% block special_list %}
+     {% for prod in products|slice:'4' %}
+          <div class="col-lg-3 col-md-6 special-grid best-seller">
+            <div class="products-single fix shadow" style="border-color:gainsboro;border:1px solid gainsboro">
+            <div class="box-img-hover" >
+                 {% if prod.is_featured %}
+                       <div class="type-lb">
+                        <p class="sale bg-dark">Top featured</p>
+                      </div>
+                {% endif %}
+                <img src="{{ prod.image.url }}" class="img-fluid" alt="Image" style="height:230px">
+                <div class="mask-icon">
+                    <ul>
+                        <li><a href="#" data-toggle="tooltip" class="bg-info" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                    </ul>
+                    <a class="cart bg-info" href="#">Buy Now</a>
+                </div>
+            </div>
+            <div class="why-text">
+                <h4>{{ prod.name }}</h4>
+                <h5>${{ prod.price }}</h5>
+            </div>
+            </div>
+          </div>
+     {% endfor %}
+{% endblock %}

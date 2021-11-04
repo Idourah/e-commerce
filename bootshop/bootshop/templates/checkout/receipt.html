@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_messages %}
+{% block main-content %}
+    <table xmlns="http://www.w3.org/1999/html" class="table">
+        <caption>Your order has been placed <br/><br/>
+             Your order is: {{ order.id }}
+        </caption>
+        <thead>
+             <tr>
+                 <th scope="col">Name</th>
+                 <th scope="col">Price</th>
+                 <th class="right" scope="col">Total</th>
+             </tr>
+        </thead>
+        <tfoot>
+           <tr>
+               <td>Order Total: ${{ order.total }}</td>
+           </tr>
+        </tfoot>
+        <tbody>
+           {% for item in order_items %}
+              <tr>
+                <td>{{ item.name }}</td>
+                  <td>{{ item.price }}</td>
+                  <td>{{ item.quantity }}</td>
+                  <td class="float-right">$ {{ item.total }}</td>
+              </tr>
+           {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+

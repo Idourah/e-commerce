@@ -1,0 +1,16 @@
+{% with active_categories as cats %}
+    {% for cat in cats %}
+      {% ifequal cat.get_absolute_url request_path %}
+         <li>
+             <a class="list-group-item text-info" href="#" data-toggle="" aria-expanded="true" aria-controls="sub-men1">
+              {{ cat.name }}
+            </a>
+         </li>
+
+      {% else %}
+       <a class="list-group-item" href="{{ cat.get_absolute_url }}" data-toggle="" aria-expanded="true" aria-controls="sub-men1">
+           {{ cat.name }}
+       </a>
+      {% endifequal %}
+    {% endfor %}
+{% endwith %}

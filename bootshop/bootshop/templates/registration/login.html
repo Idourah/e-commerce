@@ -1,0 +1,41 @@
+{% extends 'manager/manager_base.html' %}
+{% load bootstrap5 %}
+{% bootstrap_messages %}
+{% block content_wrapper %}
+  <div class="container mt-3">
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+          <h3>Login as a shop manager</h3>
+         {% if form.errors %}
+               <p>Your username and password didn't match. Please try again.</p>
+         {% endif %}
+
+          {% if next %}
+              {% if user.is_authenticated %}
+                 <p>Your account doesn't have access to this page. To proceed,
+                 please login with an account that has access.</p>
+              {% else %}
+              <p>Please login to see this page.</p>
+               {% endif %}
+          {% endif %}
+
+          <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <input type="submit" value="login" class="btn btn-info"/>
+            <input type="hidden" name="next" value="{{ next }}" />
+              <a href="{% url 'home' %}" class="btn btn-secondary">SHOP HOME</a>
+          </form>
+
+          <a href="#" class="float-right">forgot password ?</a>
+
+
+
+          {# Assumes you setup the password_reset view in your URLconf #}
+
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

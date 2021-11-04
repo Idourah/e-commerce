@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_messages %}
+{% block main-content %}
+    <!-- Start All Title Box -->
+    <div class="all-title-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Checkout</h2>
+                    <ul class="breadcrumb bg-info">
+                        <li class="breadcrumb-item"><a href="#">Shop</a></li>
+                        <li class="breadcrumb-item active ">Checkout</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End All Title Box -->
+
+    <!-- Start Cart  -->
+    <div class="cart-box-main">
+        <div class="container">
+            <div class="row new-account-login">
+                <div class="col-sm-6 col-lg-6 mb-3">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6 mb-3">
+                    <div class="checkout-address">
+                        <div class="title-left">
+                            <h3>Billing address</h3>
+                        </div>
+                        <form class="needs-validation" method="POST">
+                            {% csrf_token %}
+                            {% bootstrap_form form %}
+                            <hr class="mb-4">
+                            <div class="row">
+
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <div class="payment-icon">
+                                        <ul>
+                                            <li><img class="img-fluid" src="{% static 'images/payment-icon/1.png' %}" alt=""></li>
+                                            <li><img class="img-fluid" src="{% static 'images/payment-icon/2.png' %}" alt=""></li>
+                                            <li><img class="img-fluid" src="{% static 'images/payment-icon/3.png' %}" alt=""></li>
+                                            <li><img class="img-fluid" src="{% static  'images/payment-icon/5.png' %}" alt=""></li>
+                                            <li><img class="img-fluid" src="{% static 'images/payment-icon/7.png' %}" alt=""></li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <input type="submit" class="ml-auto btn bg-info hvr-hover text-white" value="Place Order">
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-6 mb-3">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12">
+                            <div class="shipping-method-box">
+                                <div class="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-12">
+                            <div class="odr-box">
+                                <div class="title-left">
+                                    <h3>Shopping cart</h3>
+                                </div>
+                                <div class="rounded p-2 bg-light">
+                                     {% if cart_items %}
+                                        {% for item in cart_items %}
+                                            <div class="media mb-2 border-bottom">
+                                                <div class="media-body"> <a href="#"> {{ item.name }}</a>
+                                                    <div class="small text-muted">Price: ${{ item.price }} <span class="mx-2">|</span> Qty: {{ item.quantity }} <span class="mx-2">|</span> Subtotal: ${{ item.total }}</div>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                     {% else %}
+                                        Your cart is empty
+                                     {% endif %}
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-12"><br>
+                            <div class="order-box">
+                                <div class="d-flex gr-total">
+                                    <h5 class="text-info">Total</h5>
+                                    <div class="ml-auto h5"> $ {{ cart_total }}</div><br>
+                                </div>
+                                </div>
+                        </div><br>
+                        <div class="col-12 d-flex shopping-box">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- End Cart -->
+{% endblock %}

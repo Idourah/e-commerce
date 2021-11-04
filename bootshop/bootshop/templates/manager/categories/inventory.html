@@ -1,0 +1,35 @@
+{% extends 'manager/manager_base.html' %}
+{% block content_wrapper %}
+<div class="container">
+    <br/><br/>
+    {% if messages %}
+       <div class="alert alert-success mt-3">
+           {% for message in messages %}
+             <p>{{ message }}</p>
+           {% endfor %}
+       </div>
+    {% endif %}
+    <a href="{% url 'add_category' %}" class="btn btn-info">new category</a><br/>
+
+   <table class="table mt-3">
+       <thead>
+          <tr>
+              <th scope="col">Category ID</th>
+              <th scope="col">Category Name</th>
+              <th>Created at</th>
+              <th>Updated at</th>
+              <th>Category detail</th>
+          </tr>
+       </thead>
+       {% for item in categories %}
+         <tr>
+             <td>{{ item.id }}</td>
+             <td>{{ item.name }}</td>
+             <td>{{ item.created_at }}</td>
+             <td >{{ item.updated_at }}</td>
+             <td><a class="btn btn-info" href="#">details</a></td>
+         </tr>
+       {% endfor %}
+   </table>
+</div>
+{% endblock %}>

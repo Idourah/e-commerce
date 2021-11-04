@@ -1,0 +1,21 @@
+{% extends 'catalog/catalog.html' %}
+{% load search_tags %}
+{% block product_content %}
+   <div class="row product-categorie-box">
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade show active" id="grid-view">
+            <div class="row">
+                {% for prod in result %}
+                  <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                      {% include 'tags/product.html' %}
+                  </div>
+                  {% empty %}
+                <h2 style="margin-left:15px">No products were found matching those search terms.</h2>
+                {% endfor %}
+                <div class="cb">&nbsp;</div>
+                {% pagination_links request paginator %}
+            </div>
+        </div>
+    </div>
+</div><br>
+{% endblock %}

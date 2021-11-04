@@ -1,0 +1,9 @@
+ <ul class="nav bg-dark">
+     {% if user.is_authenticated and user.is_staff == False %}
+        <li class="nav-item"><a href="{% url 'show_manager' %}" class="nav-link text-light">Home</a></li>
+        <li class="nav-item"><a href="{% url 'order_view' %}" class="nav-link text-light">Orders</a></li>
+        <li class="nav-item"><a href="{% url 'product_view' %}" class="nav-link text-light">Products</a></li>
+        <li class="nav-item"><a href="{% url 'category_view' %}" class="nav-link text-light">Categories</a></li>
+        <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link text-light">Logout</a></li>
+     {% endif %}
+ </ul><br>

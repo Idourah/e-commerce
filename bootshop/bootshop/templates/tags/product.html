@@ -1,0 +1,17 @@
+<div class="products-single fix shadow" style="border:1px solid gainsboro">
+        <div class="box-img-hover">
+            {% if prod.sale_price %}
+            <div class="type-lb">
+                <p class="sale bg-dark">Sale</p>
+            </div>
+            {% endif %}
+            <img src="{{ prod.image.url }}" class="img-fluid" alt="Image" style="height:150px">
+            <div class="mask-icon">
+                <a class="cart bg-info" href="{{ prod.get_absolute_url }}">view detail</a>
+            </div>
+        </div>
+        <div class="why-text">
+            <h4>{{ prod.name }}</h4>
+            <h5> ${{ prod.price }}</h5>
+        </div>
+</div>
