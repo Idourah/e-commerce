@@ -12,9 +12,9 @@
                 <li class="nav-item"><a style="color:white" class="nav-link" href="{% url 'product' %}">Products</a></li>
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" style="color:white" data-bs-toggle="dropdown" arial-haspopup="true" aria-expanded="false">Categories</a>
-                    <div class="dropdown-menu">
+                    <ul class="dropdown-menu">
                        {% category_list request.path %}
-                    </div>
+                    </ul>
                 </li>
                 <li class="nav-item"><a style="color:white" class="nav-link" href="contact-us.html ">Contact Us</a></li>
                  <li class="nav-item">
