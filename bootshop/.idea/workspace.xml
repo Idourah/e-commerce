@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d88f8f39-f483-47b2-89b3-4ac4914e5e36" name="Changes" comment="permission errorno13 solved">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d88f8f39-f483-47b2-89b3-4ac4914e5e36" name="Changes" comment="dropdown bug fixed">
+      <change afterPath="$PROJECT_DIR$/bootshop/static/media/images/carousel/carousel-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootshop/static/media/images/carousel/carousel-2.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootshop/static/media/images/carousel/carousel-3.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootshop/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/bootshop/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootshop/templates/catalog/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootshop/templates/catalog/catalog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootshop/templates/catalog/product_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootshop/templates/catalog/product_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootshop/static/media/images/dove-gel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootshop/static/media/images/gel-img-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootshop/static/media/images/gel-img-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootshop/static/media/images/gel-men.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bootshop/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootshop/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootshop/templates/tags/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootshop/templates/tags/nav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootshop/templates/tags/pagination_links.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootshop/templates/tags/pagination_links.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootshop/templates/tags/paginator.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootshop/templates/tags/search_box.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootshop/templates/tags/search_box.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +72,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636251213765</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="dropdown bug fixed">
+      <created>1636254925942</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1636254925942</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -91,6 +97,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="css refactor" />
     <MESSAGE value="permission errorno13 solved" />
-    <option name="LAST_COMMIT_MESSAGE" value="permission errorno13 solved" />
+    <MESSAGE value="dropdown bug fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="dropdown bug fixed" />
   </component>
 </project>
