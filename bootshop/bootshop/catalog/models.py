@@ -59,7 +59,7 @@ class Product(models.Model):
                             help_text="Unique value for product URL, created from name")
     price = models.DecimalField(max_digits=9, decimal_places=2)
     old_price = models.DecimalField(max_digits=9, decimal_places=2, default=0.00, blank=True)
-    image = models.ImageField(upload_to='themes/images/products')
+    image = models.ImageField(upload_to='images/products')
     is_active = models.BooleanField(default=True)
     is_bestseller = models.BooleanField(default=False)
     is_featured = models.BooleanField(default=False)

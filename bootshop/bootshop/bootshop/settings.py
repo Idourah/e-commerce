@@ -144,8 +144,8 @@ META_DESCRIPTION = 'BEAUTY CURE is an online supplier of ointments,'
 
 
 STATIC_URL = '/static/'
-MEDIA_URL = '/themes/'
-MEDIA_ROOT = os.path.join(BASE_DIR, '/themes/images')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, '/media/images')
 
 
 #STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

@@ -2,45 +2,18 @@
 /* tablets */
 /* only small tablets */
  @media only screen and (min-width: 992px) and (max-width: 1199px) {
-     nav.navbar.bootsnav ul.nav > li > a{
-         padding-top: 30px;
-         padding-bottom: 30px;
-         padding-left: 10px;
-         padding-right: 30px;
-    }
+
 }
  @media (min-width: 768px) and (max-width: 991px) {
-     nav.navbar.bootsnav .navbar-header{
-         width: 100%;
-    }
-     .navbar-light .navbar-toggler{
-         border-color: #d33b33;
-         color: #010101;
-         border-radius: 0px;
-         margin-right: 7px;
-         padding-top: 6px;
-         padding-top: 6px;
-         float: left;
-         margin-top: 20px;
-    }
-     nav.navbar.bootsnav ul.nav > li > a{
-         padding: 5px 15px;
-    }
-     nav.navbar.bootsnav .navbar-nav{
-         padding: 0px;
-         margin: 0px;
-    }
+
      .custom-select-box{
          display: none;
     }
      .attr-nav{
          top: 10px;
     }
-     nav.navbar.bootsnav ul.nav li.dropdown ul.dropdown-menu{
-         position: initial !important;
-         top: 0px;
-    }
-     nav.bootsnav .megamenu-content .col-menu{
+
+    .col-menu{
          -ms-flex: 0 0 100%;
          flex: 0 0 100%;
          max-width: 100%;

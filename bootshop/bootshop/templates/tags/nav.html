@@ -1,20 +1,20 @@
 {% load static %}
 {% load catalog_tags %}
 <nav class="navbar navbar-expand-lg navbar-light bg-dark navbar-default">
-    <div class="container-fluid">
+    <div class="container">
         <a class="navbar-brand text-white" href="#">Brand</a>
         <button class="navbar-toggler border-0 mt-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" arial-controls="navbarSupportedContent" aria-expanded="false" arial-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
            <ul class="navbar-nav ml-auto mb-2 mb-lg-0 nav navbar-right">
                 <li class="nav-item active"><a class="nav-link text-white" href="{% url 'home' %}">Home</a></li>
                 <li class="nav-item"><a style="color:white" class="nav-link" href="{% url 'product' %}">Products</a></li>
-                <li class="dropdown">
-                    <a href="#" class="nav-link " data-toggle="dropdown" style="color:white">Categories</a>
-                    <ul class="dropdown-menu">
-                        {% category_list request.path %}
-                    </ul>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" style="color:white" data-bs-toggle="dropdown" arial-haspopup="true" aria-expanded="false">Categories</a>
+                    <div class="dropdown-menu">
+                       {% category_list request.path %}
+                    </div>
                 </li>
                 <li class="nav-item"><a style="color:white" class="nav-link" href="contact-us.html ">Contact Us</a></li>
                  <li class="nav-item">
