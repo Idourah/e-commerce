@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d88f8f39-f483-47b2-89b3-4ac4914e5e36" name="Changes" comment="component app deleted">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootshop/templates/catalog/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootshop/templates/catalog/catalog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootshop/templates/catalog/product_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootshop/templates/catalog/product_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootshop/templates/tags/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootshop/templates/tags/nav.html" afterDir="false" />
+    <list default="true" id="d88f8f39-f483-47b2-89b3-4ac4914e5e36" name="Changes" comment="catalog-right-container">
+      <change beforePath="$PROJECT_DIR$/bootshop/templates/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootshop/templates/contact-us.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636496614716</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="catalog-right-container">
+      <created>1636497598921</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1636497598921</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -117,6 +122,7 @@
     <MESSAGE value="dropdown bug fixed" />
     <MESSAGE value="carousel folder created" />
     <MESSAGE value="component app deleted" />
-    <option name="LAST_COMMIT_MESSAGE" value="component app deleted" />
+    <MESSAGE value="catalog-right-container" />
+    <option name="LAST_COMMIT_MESSAGE" value="catalog-right-container" />
   </component>
 </project>
