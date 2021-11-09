@@ -1,12 +1,16 @@
 from django.shortcuts import render
 from search import search
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
-from bootshop import  settings
+from bootshop import settings
+from django.http import JsonResponse
+from catalog.models import  Product
+from django.db.models import Q
 
 # Create your views here.
 
 
 def results(request):
+    context = {}
     q = request.GET.get('q', '')
     # get current page number.
     try:
@@ -25,5 +29,20 @@ def results(request):
     # store the search
     search.store(request, q)
     page_title = 'search Result for:' + q
+    context["page_title"] = page_title
+    context["paginator"] = paginator
+    context["result"] = result
+    if request.is_ajax():
+        json_data = list(result.values())
+        return JsonResponse({'data':json_data}, status=200)
+    return render(request, 'catalog/search.html', context)
+
+
+def search_json(request):
+    term = request.GET.get("q")
+    products = search.search_products(term).get("products")
+    if request.is_ajax():
+        json_data = list(products.values())
+        return JsonResponse({'products': json_data}, status=200)
     return render(request, 'catalog/search.html', locals())
 

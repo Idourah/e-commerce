@@ -1,9 +1,14 @@
 {% extends 'catalog/catalog.html' %}
 {% block product_content %}
 <div class="row product-categorie-box">
+    <div class="spinner-container container-fluid justify-content-center">
+        <div class="spinner-border hidden" role="status">
+           <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
     <div class="tab-content">
         <div role="tabpanel" class="tab-pane fade show active" id="grid-view">
-            <div class="row">
+            <div class="row card-container">
                 {% for prod in products %}
                   <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
                       {% include 'tags/product.html' %}
